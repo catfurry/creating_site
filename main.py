@@ -9,9 +9,9 @@ class myHandler(BaseHTTPRequestHandler):
             path = "/index"
 
         try:
-            file  = open(path +'.txt', 'r')
+            file  = open(path +'.html', 'r')
         except FileNotFoundError:
-            file  = open("404.txt", 'r')
+            file  = open("404.html", 'r')
 
         message = file.read()
         file.close()
